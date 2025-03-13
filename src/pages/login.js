@@ -2,7 +2,7 @@ import './login.css';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+import { Outlet, Link } from "react-router-dom";
 
 function Login(navigated) {
   const [formValues, setFormValues] = useState({email:"", password:"", favClass:"1"})
@@ -26,7 +26,6 @@ function Login(navigated) {
     return password.length > 5 && password.length <8;
   });
 
-  const go_home = ()=>{navigated('/home')}
 
   const clickSubmit = (() => {
     //Call fetch
@@ -34,7 +33,7 @@ function Login(navigated) {
     const passwordState = validationStates.passwordState;
     setValidationStates({emailState: emailState, passwordState: passwordState})
     if(emailState && passwordState){
-        go_home();
+        alert("Good")
     }
     else{
       alert("Invalid email or password")
@@ -69,6 +68,7 @@ function Login(navigated) {
       <Button variant="primary" onClick={clickSubmit}>
         Login
       </Button>
+      <Link to = '/home'>Login to HOme</Link>
     </Form>
 
     </div>
