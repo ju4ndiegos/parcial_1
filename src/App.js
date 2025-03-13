@@ -1,25 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './pages/login.js'
+import Home from './pages/home.js';
+import { Suspense, useState, useTransition } from 'react';
+import Layout from './Layout';
+import Detail from './pages/detail.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Detail d ={'Menu'}/>
+
+      <Suspense fallback={<BigSpinner />}>
+            <Router />
+      </Suspense>
     </div>
   );
 }
+
+function Router() {
+  const [page, setPage] = useState('/');
+  const [isPending, startTransition] = useTransition();
+
+  function navigate(url) {
+    console.log(url);
+    startTransition(() => {
+      setPage(url);
+    });
+  }
+
+  let content;
+  if (page === '/') {
+    content = (
+      <Login navigated={navigate} />
+    );
+  } else if (page === '/home') {
+    content = (
+      <Home navigated={navigate} />
+    );
+  }
+  else if(page === '/Stores'|| page ==='/Menu'||page==='/Cart'){
+    content=(
+      <Detail/>
+    )
+
+  }
+  return (
+    <Layout isPending={isPending}>
+      {content}
+    </Layout>
+  );
+}
+
+function BigSpinner() {
+  return <h2>🌀 Loading...</h2>;
+}
+
 
 export default App;

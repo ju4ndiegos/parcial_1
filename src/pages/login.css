@@ -1,0 +1,12 @@
+.logoTodo{
+    display: grid;
+    grid-template-areas: 'derecha izquierda';
+}
+
+.derecha{
+    grid-area: 'derecha';
+}
+
+.formulario{
+    grid-area: 'izquierda';
+}
