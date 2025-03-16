@@ -2,6 +2,7 @@ import './detail.css';
 import { Card, Carousel, Figure, Image, Stack } from "react-bootstrap";
 import getData from "../api/getData";
 import { useState } from "react";
+import { FormattedMessage } from 'react-intl';
 
 function Detail(tipo){
     //console.log(d);
@@ -48,7 +49,10 @@ function Detail(tipo){
                 <Figure>
                     <Image src={route} alt ={tipo.d} width={50}/>
                 </Figure>
-                <h1><strong>{tipo.d}</strong></h1>
+                <h1><strong>
+                    <FormattedMessage id={tipo.d}/>
+                    
+                    </strong></h1>
                 <Figure>
                     <Image src={route} alt ={tipo.d} width={50}/>
                 </Figure>

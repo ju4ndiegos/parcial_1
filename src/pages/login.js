@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
 
 function Login(navigated) {
   const [formValues, setFormValues] = useState({email:"", password:"", favClass:"1"})
@@ -49,8 +50,12 @@ function Login(navigated) {
               </img>
             </Figure>
             
-            <h1>TOO GOOD TO GO</h1>
-            <h2>FOOD WASTING SOLUTION</h2>
+            <h1>
+              <FormattedMessage id="title"/>
+            </h1>
+            <h2>
+              <FormattedMessage id="subtitle"/>
+            </h2>
             
             <Figure>
               <img src="./baner.webp"
@@ -70,14 +75,14 @@ function Login(navigated) {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Control type="password" placeholder="Password" onChange={handlePasswordChange} value={formValues.password} isInvalid={!validationStates.passwordState} />
 
-            <Form.Control.Feedback type="invalid">Your password should be between 6 and 8 char long</Form.Control.Feedback>
-            <Form.Label> Forgot Password? </Form.Label>
+            <Form.Control.Feedback type="invalid"><FormattedMessage id='password'/> </Form.Control.Feedback>
+            <Form.Label> <FormattedMessage id='forgotPassword'/> </Form.Label>
         </Form.Group>
     </Form>
 
     <Link to = '/home'>
         <Button variant="primary" onClick={clickSubmit}>
-            Login
+        <FormattedMessage id='login'/>
         </Button>
       </Link>
 

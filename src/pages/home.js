@@ -1,6 +1,7 @@
 import { Figure } from 'react-bootstrap';
 import './home.css';
 import { Link } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
 
 function Home(){
     return (
@@ -14,7 +15,7 @@ function Home(){
                                  alt="menu"
                                  width={150}/>
                             </Figure>
-                            MENU
+                            <FormattedMessage id='menu'/>
                         </button>
                     </Link>
                 </div>
@@ -27,7 +28,7 @@ function Home(){
                                  alt="store"
                                  width={150}/>
                             </Figure>
-                            STORES
+                            <FormattedMessage id='stores'/>
                         </button>
                     </Link>
                 </div>
@@ -39,7 +40,7 @@ function Home(){
                                  alt="cart"
                                  width={150}/>
                             </Figure>
-                            CART
+                            <FormattedMessage id='cart'/>
                         </button>
                     </Link>
                 </div>
