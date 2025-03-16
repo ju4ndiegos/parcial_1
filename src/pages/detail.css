@@ -1,0 +1,56 @@
+.detailTodo {
+    display: grid;
+    grid-template-areas: "header"
+                         "foto" 
+                         "carriel";
+    height: 100vh;
+}
+
+.detailTodo .header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #0A636B;
+    text-transform: uppercase;
+    color: white;
+    justify-content: center;
+    font-weight: bolder;
+    height: 15vh;
+}
+.detailTodo .header h1 {
+    font-size: 3em;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.detailTodo .container-detail  {
+    grid-area: foto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./detail.jpg'),url('https://i.etsystatic.com/isbl/af53d9/47228284/isbl_1680x420.47228284_reh620dd.jpg?version=1');
+    background-position: center;
+    background-size: cover;
+    background-color: #c50a0a;
+    height: 40vh;
+}
+
+.carousel {
+    grid-area: carriel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel a{
+    margin-bottom: 400vh;
+
+}

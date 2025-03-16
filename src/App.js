@@ -11,20 +11,13 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />}>
+          <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<Detail d={'menu'} />} />
-          <Route path="/store" element={<Detail d={'store'} />} />
-          <Route path="/chart" element={<Detail d={'chart'} />} />
-        </Route>
+          <Route path="/store" element={<Detail d={'stores'} />} />
+          <Route path="/cart" element={<Detail d={'cart'} />} />
       </Routes>
     </BrowserRouter>
-
-    <Home></Home>
-
-    <Detail d={'chart'} />
-    <Detail d={'store'} />
-    <Detail d={'menu'} />
       
     </div>
   );

@@ -1,0 +1,54 @@
+.homeTodo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./home.jpg'), url('https://bibliasholman.lifeway.com/wp-content/uploads/2020/07/brooke-lark-wMzx2nBdeng-unsplash-1536x1028.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: #ffffff;
+}
+
+.container-home{
+    width: 90vh;
+    height: 50vh;
+    background-color: #4F5F5F;
+    display: grid;
+    grid-template-areas: "b1 b2 b3";
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    border-radius: 50px;
+
+}
+
+.menu{
+    grid-area: b1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stores{
+    grid-area: b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart{
+    grid-area: b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-home button{    
+    width: wrap-content;
+    padding: 10px;
+    margin: 10px;
+    background-color: #4F5F5F;
+    color: white;
+    border: none;
+    justify-content: center;
+    
+}
