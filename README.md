@@ -1,70 +1,31 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Parcial 1 Desarrollo de aplicaciones web
 
-## Available Scripts
+Juan Diego Sánchez - 202214625
 
-In the project directory, you can run:
+Para este parcial se crearon carpetas dentro de la carpeta src así:
+
+api: Para manejar el llamado al api generado en mockaroo, las cuales según el uso pueden enviar fallos. Las apis generadas fueron:
+
+- https://my.api.mockaroo.com/cart.json?key=19321ce0 
+- https://my.api.mockaroo.com/stores.json?key=19321ce0
+- https://my.api.mockaroo.com/menu.json?key=19321ce0
+
+locales: Aquí se encuentran todo lo relacionado con  la internalización, particularmente 2 archivos (en.json y es.json) con los datos estáticos de la aplicación. En este item se dejó en el archivo index.js la posibilidad de cambiar el lenguaje de toda la aplicación.
+
+pages: Aquí se crearon archivos realcionados con las 3 partes del parcial, un archivo para manejar el login (login.js), otro para el home (home.js) y otro para los detail de cada opción (detail.js). De esta forma, adicionalmente se encuentran los archivos .css e algunas imágenes que no fueron llamadas directamente desde internet para ahorrar tiempo utilizados para ser lo más cercano al mockup presentado. 
+
+El routing se manejó desde el archivo App.js a 4 rutas, 
+- "/" que dirige al login
+- "/home"
+- "/menu"
+- "/store"
+- "/cart"
+
+Adicionalmente, se utilizaron componentes de bootstrap, como lo son Form, Button, Figure, Carousel, Card, Image y Card, estos últimos 4 solo se usaron en el detail debido a que se necesitaba crear un carousel con más de 1 solo estado como el mostrado en la imágen. No se usaron muchos otros componentes además de los del routing e internalización.
+
+Para ejecutar la aplicación se deben seguir los siguientes comandos:
+
+### `npm install`
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
